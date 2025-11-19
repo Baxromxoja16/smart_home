@@ -1,0 +1,45 @@
+@import '../../../../../styles.scss';
+
+:host ::ng-deep .p-card {
+    min-height: 150px;
+    position: relative;
+
+    .group-toggle-container {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 10;
+        
+        .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+            background: $primary-color;
+        }
+    }
+    
+    .card-content-area {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding-top: 5px;
+    }
+}
+
+.horizontalLayout {
+    .card-content-area {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
+
+.verticalLayout {
+    .card-content-area {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+.active-highlight {
+    border: 2px solid $primary-color !important;
+    box-shadow: 0 0 10px rgba(66, 165, 245, 0.3);
+}

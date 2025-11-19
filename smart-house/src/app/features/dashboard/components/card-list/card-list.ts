@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card-list',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './card-list.scss',
 })
 export class CardList {
-
+  @Input() viewMode: 'overview' | 'lights' = 'overview';
 }

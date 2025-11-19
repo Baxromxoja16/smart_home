@@ -1,0 +1,42 @@
+@import '../../../../../styles.scss';
+
+.sensor-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+
+    mat-icon {
+        font-size: 1.5rem;
+        margin-right: 15px;
+        color: #79a6d9;
+    }
+
+    .sensor-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sensor-label {
+        font-size: 0.8rem;
+        color: #ccc;
+    }
+
+    .sensor-value {
+        font-size: 1rem;
+        font-weight: bold;
+        color: $text-color;
+    }
+}
+
+:host-context(.horizontalLayout) .sensor-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    mat-icon {
+        margin: 0 0 5px 0;
+    }
+    .sensor-details {
+        align-items: center;
+    }
+}
