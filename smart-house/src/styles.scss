@@ -19,25 +19,23 @@ body {
     min-height: 100vh;
 }
 
-.app-main {
-    padding: 20px;
-}
-
 /* ------------------ PrimeNG components customization ------------------ */
 
 .p-card {
     background-color: $card-bg;
     border-radius: 8px;
     box-shadow: none;
-    border: 1px solid #3c3c3c; 
-    
+    border: 1px solid #3c3c3c;
+
     .p-card-header {
         padding-bottom: 0;
     }
+
     .p-card-title {
         color: $text-color;
         font-size: 1.1rem;
     }
+
     .p-card-content {
         padding-top: 10px;
     }
@@ -46,13 +44,15 @@ body {
 .p-tabview .p-tabview-nav {
     background: $dark-bg;
     border-bottom: 2px solid #3c3c3c;
-    
+
     .p-tabview-nav-link {
         color: $text-color;
+
         &:hover {
             color: $primary-color;
         }
     }
+
     .p-highlight .p-tabview-nav-link {
         color: $primary-color;
         border-color: $primary-color;
