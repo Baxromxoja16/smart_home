@@ -7,14 +7,21 @@ import { TabsModule } from 'primeng/tabs';
   standalone: true,
   imports: [CardList, TabsModule],
   template: `
-    <p-tabs>
-      <p-tablist header="Overview">
-        <app-card-list [viewMode]="'overview'"></app-card-list>
+    <p-tabs value="overview">
+      <p-tablist>
+        <p-tab value="overview">Overview</p-tab>
+        <p-tab value="lights">Lights</p-tab>
       </p-tablist>
-      <p-tablist header="Lights">
-        <app-card-list [viewMode]="'lights'"></app-card-list>
-      </p-tablist>
+      <p-tabpanels>
+        <p-tabpanel value="overview">
+          <app-card-list viewMode="overview"></app-card-list>
+        </p-tabpanel>
+        <p-tabpanel value="lights">
+          <app-card-list viewMode="lights"></app-card-list>
+        </p-tabpanel>
+      </p-tabpanels>
     </p-tabs>
   `,
+  styleUrl: './dashboard.component.scss',
 })
-export class DashboardComponent {}
+export class DashboardComponent { }
