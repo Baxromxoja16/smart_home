@@ -26,6 +26,12 @@
     }
 
     .card-content {
+
+        app-device,
+        app-sensor {
+            width: 100%;
+        }
+
         &.horizontalLayout {
             display: flex;
             gap: 16px;
