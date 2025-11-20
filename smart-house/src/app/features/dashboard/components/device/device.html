@@ -1,0 +1,11 @@
+<div class="device-item">
+    <div class="icon-wrapper" [appActiveHighlight]="device.state" (click)="toggleState()" style="cursor: pointer;">
+        <span class="material-icons">{{ device.icon }}</span>
+        <span class="label">{{ device.label }}</span>
+    </div>
+    <div class="info">
+        <span class="state">
+            <p-toggleswitch [(ngModel)]="device.state"></p-toggleswitch>
+        </span>
+    </div>
+</div>

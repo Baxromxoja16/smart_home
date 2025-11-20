@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+$dark-bg: #1e1e1e;
+$card-bg: #2d2d2d;
+$text-color: #ffffff;
+$primary-color: #42a5f5;
+
+body {
+    background-color: $dark-bg;
+    color: $text-color;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.app-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+    transition: grid-template-columns 0.3s ease;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+}
+
+/* ------------------ PrimeNG components customization ------------------ */
+
+.p-card {
+    background-color: $card-bg;
+    border-radius: 8px;
+    box-shadow: none;
+    border: 1px solid #3c3c3c;
+
+    .p-card-header {
+        padding-bottom: 0;
+    }
+
+    .p-card-title {
+        color: $text-color;
+        font-size: 1.1rem;
+    }
+
+    .p-card-content {
+        padding-top: 10px;
+    }
+}
+
+.p-tabview .p-tabview-nav {
+    background: $dark-bg;
+    border-bottom: 2px solid #3c3c3c;
+
+    .p-tabview-nav-link {
+        color: $text-color;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    .p-highlight .p-tabview-nav-link {
+        color: $primary-color;
+        border-color: $primary-color;
+        background: $dark-bg;
+    }
+}

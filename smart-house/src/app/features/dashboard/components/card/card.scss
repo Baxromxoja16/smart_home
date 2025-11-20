@@ -1,0 +1,52 @@
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+
+    &.active-highlight {
+        border-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+        }
+    }
+
+    .card-content {
+
+        app-device,
+        app-sensor {
+            width: 100%;
+        }
+
+        &.horizontalLayout {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+        }
+
+        &.verticalLayout {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &.singleDevice {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

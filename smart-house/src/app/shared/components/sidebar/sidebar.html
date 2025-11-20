@@ -1,0 +1,23 @@
+<button class="mobile-toggle" (click)="toggle()">
+    <i class="material-icons">{{ isOpen ? 'close' : 'menu' }}</i>
+</button>
+
+<div class="sidebar-overlay" [class.open]="isOpen" (click)="close()"></div>
+
+<aside class="sidebar-content" [class.open]="isOpen">
+    <header class="sidebar-header">
+        <h3>Smart Home UI</h3>
+    </header>
+    <nav class="sidebar-menu">
+        <a routerLink="/dashboard" routerLinkActive="active-link" (click)="close()">
+            <i class="material-icons">dashboard</i> Overview
+        </a>
+        <a routerLink="/about" routerLinkActive="active-link" (click)="close()">
+            <i class="material-icons">info</i> About
+        </a>
+    </nav>
+    <footer class="sidebar-footer">
+        <div class="user-avatar">RS</div>
+        <span>RS School. Angular</span>
+    </footer>
+</aside>
