@@ -1,1 +1,9 @@
-<p>device works!</p>
+<div class="device-item">
+    <div class="icon-wrapper" [appActiveHighlight]="device.state">
+        <span class="material-icons">{{ device.icon }}</span>
+    </div>
+    <div class="info">
+        <span class="label">{{ device.label }}</span>
+        <span class="state">{{ device.state ? 'On' : 'Off' }}</span>
+    </div>
+</div>

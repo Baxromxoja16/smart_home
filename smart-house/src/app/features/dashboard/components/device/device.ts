@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { DeviceItem } from '../../../../shared/models/interfaces';
+import { ActiveHighlightDirective } from '../../../../shared/directives/active-highlight.directive';
 
 @Component({
   selector: 'app-device',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, ActiveHighlightDirective],
   templateUrl: './device.html',
-  styleUrl: './device.scss',
+  styleUrls: ['./device.scss']
 })
-export class Device {
-
+export class DeviceComponent {
+  @Input() device!: DeviceItem;
 }

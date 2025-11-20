@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { SensorItem } from '../../../../shared/models/interfaces';
+import { SensorValuePipe } from '../../../../shared/pipes/sensor-value.pipe';
 
 @Component({
   selector: 'app-sensor',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, SensorValuePipe],
   templateUrl: './sensor.html',
-  styleUrl: './sensor.scss',
+  styleUrls: ['./sensor.scss']
 })
-export class Sensor {
-
+export class SensorComponent {
+  @Input() sensor!: SensorItem;
 }
