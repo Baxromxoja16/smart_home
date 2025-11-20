@@ -1,1 +1,5 @@
-<p>card-list works! {{viewMode}} </p>
+<div class="card-list">
+    @for (card of cards; track card.id) {
+    <app-card [card]="card"></app-card>
+    }
+</div>

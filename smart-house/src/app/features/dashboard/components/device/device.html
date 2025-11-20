@@ -4,6 +4,8 @@
     </div>
     <div class="info">
         <span class="label">{{ device.label }}</span>
-        <span class="state">{{ device.state ? 'On' : 'Off' }}</span>
+        <span class="state">
+            <p-toggleswitch [(ngModel)]="device.state"></p-toggleswitch>
+        </span>
     </div>
 </div>

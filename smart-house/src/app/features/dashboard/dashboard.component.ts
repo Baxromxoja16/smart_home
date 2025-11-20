@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { CardList } from './components/card-list/card-list';
+import { CardListComponent } from './components/card-list/card-list';
 import { TabsModule } from 'primeng/tabs';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CardList, TabsModule],
+  imports: [CardListComponent, TabsModule],
   template: `
     <p-tabs value="overview">
       <p-tablist>
@@ -14,10 +14,10 @@ import { TabsModule } from 'primeng/tabs';
       </p-tablist>
       <p-tabpanels>
         <p-tabpanel value="overview">
-          <app-card-list viewMode="overview"></app-card-list>
+          <app-card-list [viewMode]="'overview'"></app-card-list>
         </p-tabpanel>
         <p-tabpanel value="lights">
-          <app-card-list viewMode="lights"></app-card-list>
+          <app-card-list [viewMode]="'lights'"></app-card-list>
         </p-tabpanel>
       </p-tabpanels>
     </p-tabs>

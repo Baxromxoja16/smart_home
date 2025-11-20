@@ -1,6 +1,9 @@
 <div class="dashboard-card" [appActiveHighlight]="hasActiveDevices">
     <div class="card-header">
         <h3>{{ card.title }}</h3>
+        @if (showGroupToggle) {
+        <p-toggleswitch [(ngModel)]="groupState"></p-toggleswitch>
+        }
     </div>
     <div class="card-content" [ngClass]="card.layout">
         @for (item of card.items; track item.label) {

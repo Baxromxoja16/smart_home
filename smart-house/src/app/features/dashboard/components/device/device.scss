@@ -32,6 +32,12 @@
         }
     }
 
+    .info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
     :host ::ng-deep .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
         background: $primary-color;
     }
