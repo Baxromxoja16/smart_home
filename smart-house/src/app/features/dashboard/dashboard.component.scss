@@ -41,6 +41,13 @@
         }
     }
 
+    @media (max-width: 768px) {
+        .p-tablist-tab-list {
+            justify-content: flex-end;
+        }
+    }
+
+
     .p-tabpanel {
         outline: none;
     }

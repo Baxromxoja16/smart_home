@@ -7,4 +7,14 @@ import { RouterLinkActive, RouterLinkWithHref } from '@angular/router';
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.scss',
 })
-export class Sidebar {}
+export class Sidebar {
+  isOpen = false;
+
+  toggle() {
+    this.isOpen = !this.isOpen;
+  }
+
+  close() {
+    this.isOpen = false;
+  }
+}
