@@ -12,4 +12,8 @@ import { ActiveHighlightDirective } from '../../../../shared/directives/active-h
 })
 export class DeviceComponent {
   @Input() device!: DeviceItem;
+
+  toggleState() {
+    this.device.state = !this.device.state;
+  }
 }

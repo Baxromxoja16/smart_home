@@ -1,5 +1,5 @@
 <div class="device-item">
-    <div class="icon-wrapper" [appActiveHighlight]="device.state">
+    <div class="icon-wrapper" [appActiveHighlight]="device.state" (click)="toggleState()" style="cursor: pointer;">
         <span class="material-icons">{{ device.icon }}</span>
     </div>
     <div class="info">

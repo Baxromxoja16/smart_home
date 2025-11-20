@@ -35,3 +35,7 @@ export interface DashboardTab {
 export interface MockData {
   tabs: DashboardTab[];
 }
+
+export function isDevice(item: CardItem): item is DeviceItem {
+  return item.type === 'device';
+}
