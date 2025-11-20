@@ -9,7 +9,10 @@
 
 ::ng-deep {
 
-    .p-tabs,
+    .p-tabs {
+        background: transparent;
+    }
+
     .p-tabpanels {
         background: transparent;
     }
